@@ -12,24 +12,20 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// GET current notes
+// Display current notes function
 const getNotes = () => {
-    try {
-        const jsonString = fs.readFileSync("./db/db.json", "utf8");
+    const jsonString = fs.readFileSync("./db/db.json", "utf8")
         return JSON.parse(jsonString);
-    }
-    catch (parseErr) {
-        console.log("Error parsing JSON", parseErr)
-    }
-}
+}    
 
+//Write current notes function
 const writeNotes = (jsonString) => {
     fs.writeFile("./db/db.json", jsonString, (err) => {
         if (err) {
             console.log(err);
         }
         else {
-            console.log("Database Updated Successfully!");
+            console.log("Notes database updated successfully!");
         }
     });
 }
