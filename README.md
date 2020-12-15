@@ -27,7 +27,7 @@ OR use a browser to point to the link for functioning application deployed on He
 ![](public/assets/images/note-taker.png)
 
 ## Link to functional application deployed on Heroku:
-https://TBD
+https://salty-sea-64150.herokuapp.com/
 
 ## Credits
 
